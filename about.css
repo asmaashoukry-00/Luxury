@@ -330,7 +330,7 @@ html, body {
     padding: 0;
 }
 
-.container {
+/* .container {
     max-width: 100vw;
     overflow: hidden;
 }
@@ -343,4 +343,4 @@ html, body {
 section {
     width: 100%;
     overflow: hidden; 
-}
+} */
