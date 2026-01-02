@@ -291,12 +291,12 @@ img {
     text-decoration: none;
 }
 .btn-consultation{
-    border: 1px solid var(--primary-gold); /* Gold border for consistency */
+    border: 1px solid var(--primary-gold); 
     background: var(--primary-gold);
     color: var(--dark-bg);
 }
 .btn-nav-custom{
-     border: 1px solid var(--primary-gold); /* Gold border for consistency */
+     border: 1px solid var(--primary-gold); 
     background: transparent;
     color: var(--light-bg);
 }
@@ -310,7 +310,8 @@ img {
 
 /* Responsive adjustments for Mobile Devices (max-width 991px) */
 @media (max-width: 991.98px) {
-    .btn-nav-custom {
+    .btn-nav-custom,
+    .btn-consultation {
         margin-bottom: 15px !important; /* Adds the spacing you requested below the button */
         display: flex;
     }
