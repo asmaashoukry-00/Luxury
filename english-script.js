@@ -74,3 +74,17 @@ function changeLanguage(lang) {
         window.updateLanguage(lang);
     }
 }
+
+// Function to show language switcher after loading screen vanishes
+window.addEventListener('load', function() {
+    // Select the loading screen and the language switcher
+    const loader = document.querySelector('.loading-screen');
+    const langSwitcher = document.querySelector('.lang-switcher-fixed');
+
+    // Wait for the window to fully load
+    setTimeout(() => {
+        if (langSwitcher) {
+            langSwitcher.classList.add('show-switcher');
+        }
+    }, 600); // 600ms matches most common fade-out animations
+});

@@ -263,7 +263,7 @@ img {
     right: 25%;
 }
 
-.btn-consultation {
+/* .btn-consultation {
     background: var(--primary-gold);
     color: var(--dark-bg);
     padding: .5rem 1rem;
@@ -271,8 +271,35 @@ img {
     font-weight: 700;
     border: 2px solid var(--primary-gold);
     transition: var(--transition-fast);
-}
+} */
 
+
+
+
+/* Styling for the Language Button in the Navbar */
+.btn-nav-custom, 
+.btn-consultation {
+    display: inline-flex ;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px; /* Ensures consistent internal spacing */
+    height: 45px;       /* Forces both buttons to have the same height */
+    min-width: 140px;   /* Forces both buttons to have the same minimum width */
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-consultation{
+    border: 1px solid var(--primary-gold); /* Gold border for consistency */
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+}
+.btn-nav-custom{
+     border: 1px solid var(--primary-gold); /* Gold border for consistency */
+    background: transparent;
+    color: var(--light-bg);
+}
 .btn-consultation:hover {
     background: transparent;
     color: var(--primary-gold);
@@ -280,27 +307,21 @@ img {
     transform: translateY(-3px);
 }
 
-.btn-lang {
-    background: transparent;
-    color: var(--text-white);
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    font-weight: 600;
-    border: 2px solid var(--primary-gold);
-    transition: var(--transition-fast);
-    cursor: pointer;
-}
 
-.btn-lang:hover {
-    background: var(--primary-gold);
-    color: var(--dark-bg);
-    transform: translateY(-2px);
-}
-
-.btn-lang.english-active {
-    background: var(--primary-gold);
-    color: var(--dark-bg);
-    border-color: var(--primary-gold);
+/* Responsive adjustments for Mobile Devices (max-width 991px) */
+@media (max-width: 991.98px) {
+    .btn-nav-custom {
+        margin-bottom: 15px !important; /* Adds the spacing you requested below the button */
+        display: flex;
+    }
+    
+    
+    
+    /* Resets the horizontal margins used for Desktop layout */
+    .mx-lg-3 {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
 }
 
 /* toggle */
@@ -1014,4 +1035,19 @@ html[lang="en"] .lang-switcher-fixed {
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hide the fixed language switcher initially */
+.lang-switcher-fixed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Class to show the switcher after loading */
+.lang-switcher-fixed.show-switcher {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
