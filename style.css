@@ -310,12 +310,16 @@ img {
 
 /* Responsive adjustments for Mobile Devices (max-width 991px) */
 @media (max-width: 991.98px) {
-    .btn-nav-custom,
-    .btn-consultation {
+    .btn-nav-custom
+     {
         margin-bottom: 15px !important; /* Adds the spacing you requested below the button */
         display: flex;
     }
-    
+    .btn-consultation{
+        margin-bottom: 20px !important;
+        display: flex;
+
+    }
     
     
     /* Resets the horizontal margins used for Desktop layout */

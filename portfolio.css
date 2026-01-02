@@ -174,10 +174,10 @@ body {
   padding: 0;
 }
 
-.container {
+/* .container {
     max-width: 100vw;
     overflow: hidden;
-}
+} */
 
 .row {
     margin-left: 0 !important;
