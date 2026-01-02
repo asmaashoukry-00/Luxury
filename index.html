@@ -7,30 +7,28 @@
       name="description"
       content="Luxury Corner - حلول التجهيزات الفاخرة والأثاث المخصص"
     />
-    <title>الزاوية الفاخرة - الصفحة الرئيسية</title>
+    <title class="lang-key" data-en="Luxury Corner | Home">
+      الزاوية الفاخرة | الصفحة الرئيسية
+    </title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png" />
-    <!-- Bootstrap RTL -->
+
     <link
+      id="bootstrap-link"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Loading Screen -->
     <div class="loading-screen">
       <div class="loading-content">
         <div class="loading-logo">
@@ -40,112 +38,187 @@
       </div>
     </div>
 
-    <!-- Navbar -->
-    
     <nav class="navbar navbar-expand-lg fixed-top transition-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo-white.png" alt="Logo" class="nav-logo">
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-</button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link " href="about.html">من نحن</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">خدماتنا</a></li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">مشاريعنا</a></li>
-                </ul>
-                <a href="contact.html" class="btn-consultation">تواصل معنا</a>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo-white.png" alt="Logo" class="nav-logo" />
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link lang-key" data-en="Home" href="index.html"
+                >الرئيسية</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lang-key" data-en="About Us" href="about.html"
+                >من نحن</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link lang-key"
+                data-en="Services"
+                href="services.html"
+                >خدماتنا</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link lang-key"
+                data-en="Projects"
+                href="portfolio.html"
+                >مشاريعنا</a
+              >
+            </li>
+          </ul>
+          <button
+            class="lang-key btn-lang mx-lg-3"
+            data-en="العربية"
+            onclick="changeLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar')"
+          >
+            English
+          </button>
+          <a
+            href="contact.html"
+            class="btn-consultation lang-key"
+            data-en="Contact Us"
+            >تواصل معنا</a
+          >
         </div>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-content" data-aos="fade-up">
-          <h1>
-            نبتكر المساحات
-            <span class="gold-text">ونصنع الزوايا الفنية</span>
+          <h1
+            class="lang-key"
+            data-en="Innovating Spaces <span class='gold-text'>Crafting Art</span>"
+          >
+            نبتكر المساحات <span class="gold-text">ونصنع الزوايا الفنية</span>
           </h1>
-          <p>
-            شريككم الاستراتيجي في المملكة لحلول التجهيزات الفاخرة .<br />
-            نحول المخططات الهندسية إلى واقع يدمج بين الجمالية والوظيفية المتقنة.
+
+          <p
+            class="lang-key"
+            data-en="Your strategic partner in Saudi Arabia for luxury fit-out solutions."
+          >
+            شريككم الاستراتيجي في المملكة لحلول التجهيزات الفاخرة.
           </p>
-          <a href="contact.html" class="btn-primary-gold">ابدأ مشروعك الآن</a>
+          <a
+            data-en="start your project"
+            href="contact.html"
+            class="btn-primary-gold lang-key"
+            >ابدأ مشروعك الآن</a
+          >
         </div>
       </div>
     </section>
 
-    <!-- About Excellence Section -->
     <section class="section about-home">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6" data-aos="fade-left">
-            <h2>عن الزاوية الفاخرة</h2>
-            <p class="lead">
+            <h2 class="lang-key" data-en="About Luxury Corner">
+              عن الزاوية الفاخرة
+            </h2>
+            <p
+              class="lead lang-key"
+              data-en="We are a leading Saudi company specialized in providing integrated interior design and luxury fit-out solutions."
+            >
               نحن شركة سعودية رائدة متخصصة في تقديم حلول متكاملة للتصميم الداخلي
               والتجهيزات الفاخرة.
             </p>
-            <p>
-              نهدف في Luxury Corner إلى خلق بيئات استثنائية تمزج بين الابتكار
+            <p
+              class="lang-key"
+              data-en="At Luxury Corner, we aim to create exceptional environments that blend engineering innovation with a refined artistic touch, transforming our clients' aspirations into a tangible reality characterized by precision and high quality."
+            >
+              نهدف في الزاوية الفاخرة إلى خلق بيئات استثنائية تمزج بين الابتكار
               الهندسي واللمسة الفنية الراقية، محولين تطلعات عملائنا إلى واقع
               ملموس يتسم بالدقة والجودة العالية.
             </p>
-            <p>
+            <p
+              class="lang-key"
+              data-en="We focus on the finest details to ensure a unique spatial experience that meets the aspirations of Saudi society and reflects the highest standards of international luxury in every corner we create."
+            >
               نركز على أدق التفاصيل لضمان تقديم تجربة مكانية فريدة تلبي تطلعات
               المجتمع السعودي وتعكس أعلى معايير الفخامة العالمية في كل زاوية
               نصنعها.
             </p>
-            <button class="btn-primary-gold"><a href="about.html">معرفة المزيد</a></button>
+            <a
+              href="about.html"
+              class="btn-primary-gold lang-key"
+              data-en="Learn More"
+              style="text-decoration: none"
+              >معرفة المزيد</a
+            >
           </div>
           <div class="col-lg-6 text-center" data-aos="fade-right">
-            <img
-              src="assets/about.jpg"
-              alt="Luxury Corner About"
-              class="img-fluid about-img"
-            />
+            <div class="image-crop-container">
+              <img
+                src="assets/home-about.png"
+                alt="Luxury Corner About"
+                class="img-fluid about-img"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="stats-section">
       <div class="container">
         <div class="row">
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="stat-item">
               <div class="stat-number" data-target="250">0+</div>
-              <div class="stat-label">مشروع منجز</div>
+              <div class="stat-label lang-key" data-en="Projects Completed">
+                مشروع منجز
+              </div>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="stat-item">
               <div class="stat-number" data-target="180">0+</div>
-              <div class="stat-label">عميل راضٍ</div>
+              <div class="stat-label lang-key" data-en="Satisfied Clients">
+                عميل راضٍ
+              </div>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="stat-item">
               <div class="stat-number" data-target="12">0+</div>
-              <div class="stat-label">سنة من الخبرة</div>
+              <div class="stat-label lang-key" data-en="Years of Experience">
+                سنة من الخبرة
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Preview Section -->
     <section class="section">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
-          <h2>خدماتنا المتكاملة</h2>
-          <p>حلول هندسية وتصميمية شاملة من المخططات حتى التنفيذ النهائي</p>
+          <h2 class="lang-key" data-en="Our Integrated Services">
+            خدماتنا المتكاملة
+          </h2>
+          <p
+            class="lang-key"
+            data-en="Comprehensive engineering and design solutions from blueprints to final execution"
+          >
+            حلول هندسية وتصميمية شاملة من المخططات حتى التنفيذ النهائي
+          </p>
         </div>
 
         <div class="row">
@@ -156,8 +229,13 @@
           >
             <div class="service-card">
               <i class="fas fa-drafting-compass"></i>
-              <h3>التصميم الداخلي والمعماري</h3>
-              <p>
+              <h3 class="lang-key" data-en="Interior & Architectural Design">
+                التصميم الداخلي والمعماري
+              </h3>
+              <p
+                class="lang-key"
+                data-en="Preparation of conceptual designs, 3D Visualization, and material selection that embodies your aspirations."
+              >
                 إعداد المخططات الهندسية، والمنظور ثلاثي الأبعاد (3D
                 Visualization)، واختيار الخامات التي تجسد تطلعاتكم.
               </p>
@@ -171,8 +249,13 @@
           >
             <div class="service-card">
               <i class="fas fa-tools"></i>
-              <h3>التشطيب <br>وتنفيذ المشاريع</h3>
-              <p>
+              <h3 class="lang-key" data-en="Finishing & Execution">
+                التشطيب <br />وتنفيذ المشاريع
+              </h3>
+              <p
+                class="lang-key"
+                data-en="Execution of finishing and electromechanical works with the highest quality standards and site management."
+              >
                 تنفيذ أعمال التشطيبات والإلكتروميكانيك بأعلى معايير الجودة، مع
                 إدارة المواقع لضمان تسليم المشروع بنظام المفتاح.
               </p>
@@ -186,8 +269,13 @@
           >
             <div class="service-card">
               <i class="fas fa-couch"></i>
-              <h3>التأثيث والتجهيز<br />(FF&E)</h3>
-              <p>
+              <h3 class="lang-key" data-en="Furnishing & Equipment (FF&E)">
+                التأثيث والتجهيز<br />(FF&E)
+              </h3>
+              <p
+                class="lang-key"
+                data-en="Custom furniture manufacturing, unique lighting units, and final accessories that add a touch of luxury."
+              >
                 تصنيع وتوريد الأثاث المخصص ووحدات الإضاءة الفريدة، وتجهيز
                 الإكسسوارات النهائية التي تضفي لمسة الفخامة.
               </p>
@@ -196,42 +284,53 @@
         </div>
 
         <div class="text-center mt-5" data-aos="fade-up">
-          <a href="services.html" class="btn-primary-gold"
+          <a
+            href="services.html"
+            class="btn-primary-gold lang-key"
+            data-en="Discover More Services"
             >اكتشف المزيد من الخدمات</a
           >
         </div>
       </div>
     </section>
 
-    <!-- cleints section -->
-     <section class="section-clients">
-    <div class="container">
+    <section class="section-clients">
+      <div class="container">
         <div class="section-title text-center">
-            <h2 class="partners-title">شركاء النجاح</h2>
-            <!-- <div class="gold-separator"></div> -->
+          <h2 class="partners-title lang-key" data-en="Success Partners">
+            شركاء النجاح
+          </h2>
         </div>
-    </div>
-    
-    <div class="luxury-marquee">
-        <div class="marquee-track" id="clientTrack">
-            <div class="client-item"><img src="assets/logo.png" alt="Partner"></div>
-            <div class="client-item"><img src="assets/logo2.png" alt="Partner"></div>
-            <div class="client-item"><img src="assets/logo.png" alt="Partner"></div>
-            <div class="client-item"><img src="assets/logo2.png" alt="Partner"></div>
-            <div class="client-item"><img src="assets/logo.png" alt="Partner"></div>
-            <div class="client-item"><img src="assets/bg.jpg" alt="Partner"></div>
-        </div>
-    </div>
-</section>
+      </div>
 
-    <!-- WhatsApp Float Button -->
+      <div class="luxury-marquee">
+        <div class="marquee-track" id="clientTrack">
+          <div class="client-item">
+            <img src="assets/logo.png" alt="Partner" />
+          </div>
+          <div class="client-item">
+            <img src="assets/logo2.png" alt="Partner" />
+          </div>
+          <div class="client-item">
+            <img src="assets/logo.png" alt="Partner" />
+          </div>
+          <div class="client-item">
+            <img src="assets/logo2.png" alt="Partner" />
+          </div>
+          <div class="client-item">
+            <img src="assets/logo.png" alt="Partner" />
+          </div>
+          <div class="client-item">
+            <img src="assets/bg.jpg" alt="Partner" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <a href="#" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
 
-     
-
-    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -239,25 +338,43 @@
             <div class="footer-logo">
               <img src="assets/logo-white.png" alt="Luxury Corner Logo" />
             </div>
-            <p>
+            <p
+              class="lang-key"
+              data-en="We turn your vision into a tangible reality through luxury fit-out solutions and custom furniture that reflects your fine taste."
+            >
               نحول رؤيتك إلى واقع ملموس من خلال حلول التجهيزات الفاخرة والأثاث
               المخصص الذي يعكس ذوقك الرفيع.
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 mb-4">
-            <h5>روابط سريعة</h5>
+            <h5 class="lang-key" data-en="Quick Links">روابط سريعة</h5>
             <ul class="footer-links">
-              <li><a href="index.html">الرئيسية</a></li>
-              <li><a href="about.html">من نحن</a></li>
-              <li><a href="services.html">خدماتنا</a></li>
-              <li><a href="portfolio.html"> مشاريعنا</a></li>
-              
+              <li>
+                <a href="index.html" class="lang-key" data-en="Home"
+                  >الرئيسية</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="lang-key" data-en="About Us"
+                  >من نحن</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="lang-key" data-en="Services"
+                  >خدماتنا</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html" class="lang-key" data-en="Projects">
+                  مشاريعنا</a
+                >
+              </li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 mb-4">
-            <h5>تواصل معنا</h5>
+            <h5 class="lang-key" data-en="Contact Us">تواصل معنا</h5>
             <ul class="footer-links">
               <li>
                 <i
@@ -273,7 +390,10 @@
                 ></i>
                 info@luxurycorner.sa
               </li>
-              <li>
+              <li
+                class="lang-key"
+                data-en="<i class='fas fa-map-marker-alt' style='color: var(--primary-gold); margin-left: 8px'></i> Riyadh, Saudi Arabia"
+              >
                 <i
                   class="fas fa-map-marker-alt"
                   style="color: var(--primary-gold); margin-left: 8px"
@@ -284,37 +404,55 @@
           </div>
 
           <div class="col-lg-3 col-md-6 mb-4">
-            <h5>تابعنا</h5>
+            <h5 class="lang-key" data-en="Follow Us">تابعنا</h5>
             <div class="social-icons">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>© 2025 Luxury Corner. جميع الحقوق محفوظة</p>
+          <p
+            class="lang-key"
+            data-en="© 2025 Luxury Corner. All rights reserved."
+          >
+            © 2025 Luxury Corner. جميع الحقوق محفوظة
+          </p>
         </div>
       </div>
     </footer>
+    <!-- Language Switcher -->
+    <div class="lang-switcher-fixed">
+      <button class="lang-btn-main" id="langBtnMain">
+        <img src="https://flagcdn.com/w20/sa.png" id="currentFlag" alt="flag" />
+        <span id="currentLangText">العربية</span>
+        <i class="fas fa-chevron-up"></i>
+      </button>
 
-    <!-- Bootstrap JS -->
+      <ul class="lang-dropdown" id="langDropdown">
+        <li onclick="changeLanguage('ar')">
+          <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" />
+          <span>Arabic</span>
+        </li>
+        <li onclick="changeLanguage('en')">
+          <img src="https://flagcdn.com/w20/us.png" alt="English" />
+          <span>English</span>
+        </li>
+      </ul>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Custom JS -->
     <script src="script.js"></script>
+    <script src="english-script.js"></script>
   </body>
 </html>

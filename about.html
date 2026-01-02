@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>من نحن | الزاوية الفاخرة</title>
+    <title class="lang-key" data-en="About Us | Luxury Corner">
+      من نحن | الزاوية الفاخرة
+    </title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap"
@@ -11,6 +13,7 @@
     />
 
     <link
+      id="bootstrap-link"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
       rel="stylesheet"
     />
@@ -22,12 +25,9 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="about.css" />
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png" />
   </head>
   <body>
-    
-    <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top transition-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -46,81 +46,125 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">الرئيسية</a>
+              <a class="nav-link lang-key" data-en="Home" href="index.html"
+                >الرئيسية</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="about.html">من نحن</a>
+              <a
+                class="nav-link active lang-key"
+                data-en="About Us"
+                href="about.html"
+                >من نحن</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">خدماتنا</a>
+              <a
+                class="nav-link lang-key"
+                data-en="Services"
+                href="services.html"
+                >خدماتنا</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">مشاريعنا</a>
+              <a
+                class="nav-link lang-key"
+                data-en="Projects"
+                href="portfolio.html"
+                >مشاريعنا</a
+              >
             </li>
           </ul>
-          <a href="contact.html" class="btn-consultation">تواصل معنا</a>
+<button class="lang-key btn-lang mx-lg-3 " data-en="العربية" onclick="changeLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar')">
+    English
+</button>          <a
+            href="contact.html"
+            class="btn-consultation lang-key"
+            data-en="Contact Us"
+            >تواصل معنا</a
+          >
         </div>
       </div>
     </nav>
-    <!-- about hero -->
-    <section class="about-hero">
-      <div class="overlay"></div>
-      <div class="container hero-content-box">
-        <h1 data-aos="fade-up">عن شركـة الزاوية الفاخرة   </h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-          فخامة التصميم.. دقة التنفيذ
-        </p>
-        <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="400">
-          <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-            <li class="breadcrumb-item active text-gold">من نحن</li>
-          </ol>
-        </nav>
-      </div>
-    </section>
-    <!-- know about -->
+
+   <section class="about-hero">
+  <div class="overlay"></div>
+  <div class="container hero-content-box">
+    <h1 class="lang-key" data-aos="fade-up" data-en="About Luxury Corner Company">
+      عن شركـة الزاوية الفاخرة
+    </h1>
+
+    <p class="lang-key" data-aos="fade-up" data-aos-delay="200" data-en="Luxury in Design.. Precision in Execution">
+      فخامة التصميم.. دقة التنفيذ
+    </p>
+
+    <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="400">
+      <ol class="breadcrumb justify-content-center">
+        <li class="breadcrumb-item">
+          <a href="index.html" class="lang-key" data-en="Home">الرئيسية</a>
+        </li>
+        <li class="breadcrumb-item active text-gold lang-key" data-en="About Us">
+          من نحن
+        </li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
     <section class="section-padding bg-white">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-aos="fade-left">
-            <span class="sub-title">تعرف علينا</span>
-            <h2 class="main-title">نحول المساحات إلى <span>تحف فنية</span></h2>
-            <p class="desc-text mt-4">
+            <span class="sub-title lang-key" data-en="Get to Know Us"
+              >تعرف علينا</span
+            >
+            <h2
+              class="main-title lang-key"
+              data-en="Transforming Spaces into <span>Artistic Masterpieces</span>"
+            >
+              نحول المساحات إلى <span>تحف فنية</span>
+            </h2>
+            <p
+              class="desc-text mt-4 lang-key"
+              data-en="We are Luxury Corner, a leading company in the field of interior design and décor, specializing in transforming spaces into artistic masterpieces pulsing with beauty and sophistication. Our company was founded on the principle of merging modern luxury with practical functionality."
+            >
               نحن الزاوية الفاخرة، شركة رائدة في مجال التصميم الداخلي والديكور،
               متخصصة في تحويل المساحات إلى تحف فنية تنبض بالجمال والرقي. تأسست
               شركتنا على مبدأ الجمع بين الفخامة العصرية والوظيفية العملية.
             </p>
-            <p class="desc-text">
+            <p
+              class="desc-text lang-key"
+              data-en="We believe that every space tells a story; therefore, our design process begins with a deep understanding of the client's personality and unique needs. Our extensive expertise covers the execution of large-scale projects, and we have earned a prestigious reputation for delivering work with extreme precision."
+            >
               نحن نؤمن بأن كل مساحة تحكي قصة، ولذلك فإن تصميمنا يبدأ بفهم عميق
-              لشخصية العميل واحتياجاته الفريدة. تمتد خبرتنا الواسعة لتشمل تنفيذ
+              شخصية العميل واحتياجاته الفريدة. تمتد خبرتنا الواسعة لتشمل تنفيذ
               مشاريع ضخمة، وقد اكتسبنا سمعة مرموقة في تسليم الأعمال بدقة بالغة.
             </p>
           </div>
           <div class="col-lg-6" data-aos="fade-right">
             <div class="about-img-frame">
               <img
-                src="assets/about-know.jpg"
+                src="assets/aboutt.jpg"
                 alt="Interior Design"
                 class="img-fluid rounded-4 shadow-lg"
               />
-              <div class="exp-box">
-                <!-- <span class="gold-text">10+</span> -->
-                <!-- <p> سنوات من الخبرة </p> -->
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- vision & mission -->
+
     <section class="section-padding bg-light">
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-6" data-aos="zoom-in">
             <div class="vision-mission-card">
               <div class="icon-circle"><i class="fas fa-eye"></i></div>
-              <h3>رؤيتنا</h3>
-              <p>
+              <h3 class="lang-key" data-en="Vision">رؤيتنا</h3>
+              <p
+                class="lang-key"
+                data-en="To be the leading and most influential company in the field of luxury interior design and décor at both local and regional levels."
+              >
                 أن نكون الشركة الرائدة والأكثر تأثيراً في مجال الديكور والتصميم
                 الداخلي الفاخر على المستوى المحلي والإقليمي.
               </p>
@@ -129,8 +173,11 @@
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="vision-mission-card">
               <div class="icon-circle"><i class="fas fa-bullseye"></i></div>
-              <h3>رسالتنا</h3>
-              <p>
+              <h3 class="lang-key" data-en="Mission">رسالتنا</h3>
+              <p
+                class="lang-key"
+                data-en="To turn our clients' dreams into a tangible reality by providing unique and innovative designs, while adhering to budgets and timelines."
+              >
                 تحويل أحلام عملائنا إلى واقع ملموس من خلال تقديم تصاميم فريدة
                 ومبتكرة، والالتزام بالميزانية والجداول الزمنية.
               </p>
@@ -139,114 +186,207 @@
         </div>
       </div>
     </section>
+
     <section class="section-values-gradient">
-  <div class="container text-center">
-    <span class="value-sub-title">قيمنا</span>
-    <h2 class="value-main-title">مبادئنا الراسخة</h2>
-    
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
-        <div class="value-card-premium">
-          <div class="icon-box"><i class="fas fa-handshake"></i></div>
-          <h4>الموثوقية</h4>
-          <p>نلتزم دائمًا بالوصول في الوقت المحدد، ونفي بوعودنا في كل مرة دون استثناء.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="value-card-premium">
-          <div class="icon-box"><i class="fas fa-award"></i></div>
-          <h4>الجودة</h4>
-          <p>نقدّم عملًا عالي الجودة، يَصمد أمام اختبار الزمن ويعكس اهتمامنا بالتفاصيل.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="value-card-premium">
-          <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
-          <h4>الابتكار</h4>
-          <p>نسعــى إلى إيجـاد أدوات وتقنيـات جديدة لتحسين خدماتنا باستمرار.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="value-card-premium">
-          <div class="icon-box"><i class="fas fa-tachometer-alt"></i></div>
-          <h4>الكفاءة</h4>
-          <p>نعمل بذكاء لإنجاز المهام في الوقت المحدد دون المساس بجودة المخرجات.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="value-card-premium">
-          <div class="icon-box"><i class="fas fa-user-check"></i></div>
-          <h4>الاحترافية</h4>
-          <p>نوفّر تجربة عمل متميزة تقوم على الثقة والالتزام في جميع مراحل العمل.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- why us -->
-<section class="section-padding bg-white">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6 order-lg-2" data-aos="fade-right">
-        <span class="sub-title">لماذا تختارنا؟</span>
-        <h2 class="main-title">سر تميز <span>الزاوية الفاخرة</span></h2>
-        <ul class="why-list mt-4">
-          <li>
-            <i class="fas fa-check-circle"></i>
-            إدارة متكاملـــــــــة للمشاريـــــــع مـــــن التصميــــــــــم حتــــــــــى التسليــــــــــم.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            الالتزام بالجدول الزمــــــــــــــني والتكلفـــة المحددة دون المساس بالجودة.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            اعتماد أفضل الممارسات العالمية في التصميـــــــــــــــم والإشراف والتنفيـــــذ.
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            التركيز على التفاصيل التي تصنع الفرق في تجربة العميل والمستخدم النهائي.
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-6 order-lg-1" data-aos="fade-left">
-        <img
-          src="assets/about2.jpg"
-          alt="Quality Work"
-          class="img-fluid rounded-4 shadow"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- footer -->
-    <footer class="footer py-5 bg-dark">
       <div class="container text-center">
+        <span class="value-sub-title lang-key" data-en="Our Values">قيمنا</span>
+        <h2 class="value-main-title lang-key" data-en="Our Core Principles">
+          مبادئنا الراسخة
+        </h2>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up">
+            <div class="value-card-premium">
+              <div class="icon-box"><i class="fas fa-handshake"></i></div>
+              <h4 class="lang-key" data-en="Reliability">الموثوقية</h4>
+              <p
+                class="lang-key"
+                data-en="We always commit to on-time delivery and keep our promises every time without exception."
+              >
+                نلتزم دائمًا بالوصول في الوقت المحدد، ونفي بوعودنا في كل مرة دون
+                استثناء.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-2 col-md-4 col-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="value-card-premium">
+              <div class="icon-box"><i class="fas fa-award"></i></div>
+              <h4 class="lang-key" data-en="Quality">الجودة</h4>
+              <p
+                class="lang-key"
+                data-en="We provide high-quality work that stands the test of time and reflects our attention to detail."
+              >
+                نقدّم عملًا عالي الجودة، يَصمد أمام اختبار الزمن ويعكس اهتمامنا
+                بالتفاصيل.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-2 col-md-4 col-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="value-card-premium">
+              <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
+              <h4 class="lang-key" data-en="Innovation">الابتكار</h4>
+              <p
+                class="lang-key"
+                data-en="We strive to find new tools and technologies to constantly improve our services."
+              >
+                نسعــى إلى إيجـاد أدوات وتقنيـات جديدة لتحسين خدماتنا باستمرار.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-2 col-md-4 col-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="value-card-premium">
+              <div class="icon-box"><i class="fas fa-tachometer-alt"></i></div>
+              <h4 class="lang-key" data-en="Efficiency">الكفاءة</h4>
+              <p
+                class="lang-key"
+                data-en="We work smartly to complete tasks on schedule without compromising output quality."
+              >
+                نعمل بذكاء لإنجاز المهام في الوقت المحدد دون المساس بجودة
+                المخرجات.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-2 col-md-4 col-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="value-card-premium">
+              <div class="icon-box"><i class="fas fa-user-check"></i></div>
+              <h4 class="lang-key" data-en="Professionalism">الاحترافية</h4>
+              <p
+                class="lang-key"
+                data-en="We provide a premium work experience based on trust and commitment at all stages."
+              >
+                نوفّر تجربة عمل متميزة تقوم على الثقة والالتزام في جميع مراحل
+                العمل.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2" data-aos="fade-right">
+            <span class="sub-title lang-key" data-en="Why Choose Us?"
+              >لماذا تختارنا؟</span
+            >
+            <h2
+              class="main-title lang-key"
+              data-en="The Secret of <span>Luxury Corner's</span> Excellence"
+            >
+              سر تميز <span>الزاوية الفاخرة</span>
+            </h2>
+            <ul class="why-list mt-4">
+              <li
+                class="lang-key"
+                data-en="<i class='fas fa-check-circle'></i> Integrated project management from design to delivery."
+              >
+                <i class="fas fa-check-circle"></i>
+                إدارة متكاملـــــــــة للمشاريـــــــع مـــــن التصميــــــــــم
+                حتــــــــــى التسليــــــــــم.
+              </li>
+              <li
+                class="lang-key"
+                data-en="<i class='fas fa-check-circle'></i> Commitment to schedule and set costs without compromising quality."
+              >
+                <i class="fas fa-check-circle"></i>
+                الالتزام بالجدول الزمــــــــــــــني والتكلفـــة المحددة دون
+                المساس بالجودة.
+              </li>
+              <li
+                class="lang-key"
+                data-en="<i class='fas fa-check-circle'></i> Adoption of global best practices in design, supervision, and execution."
+              >
+                <i class="fas fa-check-circle"></i>
+                اعتماد أفضل الممارسات العالمية في التصميـــــــــــــــم
+                والإشراف والتنفيـــــذ.
+              </li>
+              <li
+                class="lang-key"
+                data-en="<i class='fas fa-check-circle'></i> Focus on the fine details that make a difference in the client experience."
+              >
+                <i class="fas fa-check-circle"></i>
+                التركيز على التفاصيل التي تصنع الفرق في تجربة العميل والمستخدم
+                النهائي.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-lg-1" data-aos="fade-left">
+            <img
+              src="assets/about2.jpg"
+              alt="Quality Work"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-5 bg-dark text-center">
+      <div class="container">
         <img
           src="assets/logo-white.png"
           alt="Footer Logo"
           style="height: 100px"
           class="mb-4"
         />
-        <p class="text-gray">© 2025 Luxury Corner. جميع الحقوق محفوظة</p>
+        <p
+          class="text-gray lang-key"
+          data-en="© 2025 Luxury Corner. All rights reserved."
+        >
+          © 2025 Luxury Corner. جميع الحقوق محفوظة
+        </p>
       </div>
     </footer>
-    <!-- WhatsApp Float Button -->
+
     <a href="#" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- Bootstrap JS and AOS -->
+    <!-- Language Switcher -->
+    <div class="lang-switcher-fixed">
+      <button class="lang-btn-main" id="langBtnMain">
+        <img src="https://flagcdn.com/w20/sa.png" id="currentFlag" alt="flag" />
+        <span id="currentLangText">العربية</span>
+        <i class="fas fa-chevron-up"></i>
+      </button>
+
+      <ul class="lang-dropdown" id="langDropdown">
+        <li onclick="changeLanguage('ar')">
+          <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" />
+          <span>Arabic</span>
+        </li>
+        <li onclick="changeLanguage('en')">
+          <img src="https://flagcdn.com/w20/us.png" alt="English" />
+          <span>English</span>
+        </li>
+      </ul>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="english-script.js"></script>
     <script>
       AOS.init({ duration: 1000, once: true });
-
-      // Transparent to Solid Navbar on Scroll
       window.onscroll = function () {
         var nav = document.querySelector(".navbar");
         if (window.pageYOffset > 50) {

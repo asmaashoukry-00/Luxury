@@ -1,7 +1,13 @@
 /* ================================================
    About Page Specific Styles - Luxury Corner
    ================================================ */
-   
+.about-hero p,
+.section-values-gradient p,
+.footer p,
+.footer-links a {
+  color: var(--text-gray) !important;
+  font-size: 1.1rem !important;
+}
 
 /* --- Navigation & Navbar Transitions --- */
 .navbar {
@@ -132,6 +138,11 @@
   transition: var(--transition-smooth);
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .vision-mission-card:hover {
@@ -322,13 +333,13 @@
   }
 }
 
-
 /* Fix Horizontal Scroll Issues */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* .container {

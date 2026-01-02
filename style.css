@@ -5,9 +5,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Almarai:wght@300;400;700&display=swap');
 
+
+
+p {
+    color: #000000 !important;
+    font-size: 1.2rem !important;
+    /* line-height: 1.8; */
+}
+
+
+
+.section-values-gradient p, 
+.footer p, 
+.footer-links a,
+.loading-screen p {
+    color: var(--text-gray) !important;
+    font-size: 1.1rem !important; 
+}
+.hero-section p{
+    color: white !important;
+
+}
+
+.image-crop-container {
+    width: 100%;
+    height: 450px;           /* الارتفاع المطلوب (هذا ما يجعلها قصيرة) */
+    overflow: hidden;        /* هذا السطر هو الذي "يقص" الزيادات فعلياً */
+    border-radius: 20px;     /* انحناء الزوايا */
+    display: flex;
+    align-items: center;     /* يضمن أن القص يتم من الأعلى والأسفل بالتساوي */
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(243, 179, 8, 0.2); /* إطار ذهبي خفيف جداً */
+}
+
+.image-crop-container .about-img {
+    width: 100% !important;
+    height: auto !important; /* يحافظ على جودة الصورة */
+    min-height: 100%;        
+    object-fit: cover;
+}
+
+/* للموبايل: نجعلها أقصر أيضاً لتناسب الشاشة */
+@media (max-width: 768px) {
+    .image-crop-container {
+        height: 200px; 
+    }
+}
 /* ===========================
    CSS Variables
    =========================== */
+   
 :root {
     /* Colors */
     --primary-gold: #f3b308;
@@ -231,6 +278,29 @@ img {
     color: var(--primary-gold);
     box-shadow: var(--shadow-gold);
     transform: translateY(-3px);
+}
+
+.btn-lang {
+    background: transparent;
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid var(--primary-gold);
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-lang:hover {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+    transform: translateY(-2px);
+}
+
+.btn-lang.english-active {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+    border-color: var(--primary-gold);
 }
 
 /* toggle */
@@ -797,4 +867,129 @@ img {
 }
 
 
+/* ===================================================
+   تعديلات اللغة والتحكم في التوسط (English & Arabic)
+   =================================================== */
+
+/* التوسط العام للهيرو سيكشن في اللغتين */
+.hero-content {
+    text-align: center; /* لضمان توسط النصوص */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* لضمان توسط الأزرار والعناصر داخلياً */
+    justify-content: center;
+}
+
+.hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* تعديلات خاصة عند اختيار اللغة الإنجليزية */
+html[lang="en"] {
+    direction: ltr; /* تغيير اتجاه الصفحة بالكامل */
+}
+
+html[lang="en"] body {
+    text-align: left; /* المحاذاة الافتراضية للإنجليزي */
+}
+
+/* لضمان بقاء العناوين في المنتصف في قسم الخدمات والشركاء */
+html[lang="en"] .section-title, 
+html[lang="en"] .hero-content, 
+html[lang="en"] .stats-section {
+    text-align: center !important;
+}
+
+/* تعديل اتجاه الخطوط الذهبية تحت العناوين في الإنجليزي */
+html[lang="en"] .about-home h2::after {
+    right: auto;
+    left: 0;
+}
+
+/* إذا أردتِ أن يكون نص "عن الشركة" في الإنجليزي من اليسار وليس بالمنتصف */
+html[lang="en"] .about-home {
+    text-align: left;
+}
+
+/* ضبط حركة الماركي (العملاء) في الإنجليزي ليكون الاتجاه صحيحاً */
+html[lang="en"] .marquee-track {
+    animation: luxury-scroll-ltr 35s linear infinite;
+}
+
+@keyframes luxury-scroll-ltr {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
 /* ---------------------------------------- */
+/* الحاوية الرئيسية */
+.lang-switcher-fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* سيتغير تلقائياً في الإنجليزية إلى right بفضل dir=ltr */
+    z-index: 9999;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* الزر الأساسي */
+.lang-btn-main {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.lang-btn-main img { width: 20px; border-radius: 2px; }
+
+/* قائمة الخيارات */
+.lang-dropdown {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    background: #fff;
+    border-radius: 8px;
+    list-style: none;
+    padding: 5px;
+    width: 130px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: none; /* مخفية افتراضياً */
+    animation: slideUp 0.3s ease;
+}
+
+.lang-dropdown li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.lang-dropdown li:hover { background: #f8f8f8; }
+
+/* إظهار القائمة */
+.lang-switcher-fixed.active .lang-dropdown { display: block; }
+.lang-switcher-fixed.active .lang-btn-main i { transform: rotate(180deg); }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* تعديل الاتجاه في الإنجليزية */
+html[lang="en"] .lang-switcher-fixed {
+    left: auto;
+    right: 20px;
+}
+html[lang="ar"] .lang-switcher-fixed {
+    left: auto;
+    right: 20px;
+}
