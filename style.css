@@ -868,16 +868,16 @@ img {
 
 
 /* ===================================================
-   تعديلات اللغة والتحكم في التوسط (English & Arabic)
+   LANGUAGE ADJUSTMENTS & ALIGNMENT CONTROL
    =================================================== */
 
-/* التوسط العام للهيرو سيكشن في اللغتين */
+/* General Hero Section centering for both languages */
 .hero-content {
-    text-align: center; /* لضمان توسط النصوص */
+    text-align: center;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* لضمان توسط الأزرار والعناصر داخلياً */
+    align-items: center;
     justify-content: center;
 }
 
@@ -886,34 +886,51 @@ img {
     margin-right: auto;
 }
 
-/* تعديلات خاصة عند اختيار اللغة الإنجليزية */
+/* English Language Specific Adjustments */
 html[lang="en"] {
-    direction: ltr; /* تغيير اتجاه الصفحة بالكامل */
+    direction: ltr;
 }
 
 html[lang="en"] body {
-    text-align: left; /* المحاذاة الافتراضية للإنجليزي */
-}
-
-/* لضمان بقاء العناوين في المنتصف في قسم الخدمات والشركاء */
-html[lang="en"] .section-title, 
-html[lang="en"] .hero-content, 
-html[lang="en"] .stats-section {
-    text-align: center !important;
-}
-
-/* تعديل اتجاه الخطوط الذهبية تحت العناوين في الإنجليزي */
-html[lang="en"] .about-home h2::after {
-    right: auto;
-    left: 0;
-}
-
-/* إذا أردتِ أن يكون نص "عن الشركة" في الإنجليزي من اليسار وليس بالمنتصف */
-html[lang="en"] .about-home {
     text-align: left;
 }
 
-/* ضبط حركة الماركي (العملاء) في الإنجليزي ليكون الاتجاه صحيحاً */
+/* Center headings in Services and Partners sections  */
+html[lang="en"] .section-title, 
+html[lang="en"] .hero-content, 
+html[lang="en"] .stats-section,
+html[lang="en"] .sectors-grid-section .text-center {
+    text-align: center !important;
+}
+
+/* Adjust gold lines under headings  */
+html[lang="en"] .about-home h2::after,
+html[lang="en"] .main-title span::after {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Services Page: Flip service number and heading border  */
+html[lang="en"] .srv-number {
+    right: auto;
+    left: 0; 
+}
+
+html[lang="en"] .srv-heading {
+    border-right: none;
+    border-left: 5px solid var(--primary-gold); 
+    padding-right: 0;
+    padding-left: 15px;
+    text-align: left;
+}
+
+html[lang="en"] .srv-features-list li i {
+    margin-left: 0;
+    margin-right: 10px; /* Moves check icon spacing to the right */
+}
+
+/* Clients marquee animation adjustment for English */
 html[lang="en"] .marquee-track {
     animation: luxury-scroll-ltr 35s linear infinite;
 }
@@ -922,17 +939,32 @@ html[lang="en"] .marquee-track {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
-/* ---------------------------------------- */
-/* الحاوية الرئيسية */
+
+/* ===================================================
+   FIXED LANGUAGE SWITCHER STYLING
+   =================================================== */
+
+/* Main Container */
 .lang-switcher-fixed {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* سيتغير تلقائياً في الإنجليزية إلى right بفضل dir=ltr */
     z-index: 9999;
     font-family: 'Cairo', sans-serif;
 }
 
-/* الزر الأساسي */
+/* Default position (Arabic) */
+html[lang="ar"] .lang-switcher-fixed {
+    left: auto;
+    right: 20px;
+}
+
+/* Position for English */
+html[lang="en"] .lang-switcher-fixed {
+    left: 20px;
+    right: auto;
+}
+
+/* Main Button */
 .lang-btn-main {
     background: #fff;
     border: 1px solid #ddd;
@@ -948,7 +980,7 @@ html[lang="en"] .marquee-track {
 
 .lang-btn-main img { width: 20px; border-radius: 2px; }
 
-/* قائمة الخيارات */
+/* Dropdown Menu */
 .lang-dropdown {
     position: absolute;
     bottom: calc(100% + 10px);
@@ -959,7 +991,7 @@ html[lang="en"] .marquee-track {
     padding: 5px;
     width: 130px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: none; /* مخفية افتراضياً */
+    display: none;
     animation: slideUp 0.3s ease;
 }
 
@@ -975,21 +1007,11 @@ html[lang="en"] .marquee-track {
 
 .lang-dropdown li:hover { background: #f8f8f8; }
 
-/* إظهار القائمة */
+/* Toggle Dropdown Visibility */
 .lang-switcher-fixed.active .lang-dropdown { display: block; }
 .lang-switcher-fixed.active .lang-btn-main i { transform: rotate(180deg); }
 
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* تعديل الاتجاه في الإنجليزية */
-html[lang="en"] .lang-switcher-fixed {
-    left: auto;
-    right: 20px;
-}
-html[lang="ar"] .lang-switcher-fixed {
-    left: auto;
-    right: 20px;
 }

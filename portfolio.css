@@ -174,7 +174,7 @@ body {
   padding: 0;
 }
 
-/* .container {
+.container {
     max-width: 100vw;
     overflow: hidden;
 }
@@ -187,4 +187,4 @@ body {
 section {
     width: 100%;
     overflow: hidden; 
-} */
+}
