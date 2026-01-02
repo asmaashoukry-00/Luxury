@@ -980,13 +980,13 @@ html[lang="en"] .marquee-track {
 
 /* Default position (Arabic) */
 html[lang="ar"] .lang-switcher-fixed {
-    left: auto;
+    /* left: auto; */
     right: 20px;
 }
 
 /* Position for English */
 html[lang="en"] .lang-switcher-fixed {
-     left: auto;
+     /* left: auto; */
     right: 20px;
 }
 
