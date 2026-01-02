@@ -986,8 +986,8 @@ html[lang="ar"] .lang-switcher-fixed {
 
 /* Position for English */
 html[lang="en"] .lang-switcher-fixed {
-    left: 20px;
-    right: auto;
+     left: auto;
+    right: 20px;
 }
 
 /* Main Button */
