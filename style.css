@@ -740,13 +740,13 @@ img {
 /* ضبط الجوال لجعلهم يظهرون بجانب بعضهم بحجم معقول */
 @media (max-width: 576px) {
     .marquee-track {
-        gap: 5px; /* مسافة شبه منعدمة في الجوال */
+        gap: 2px; /* مسافة شبه منعدمة في الجوال */
     }
     .client-item {
         padding: 5px;
     }
     .client-item img {
-        max-height: 60px; /* حجم مناسب لعرض شاشة الجوال */
+        max-height: 70px; /* حجم مناسب لعرض شاشة الجوال */
         max-width: 100%;
     }
 }
