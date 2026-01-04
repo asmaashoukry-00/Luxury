@@ -108,7 +108,7 @@
 .img-main-portfolio {
   width: 100%;
   height: 550px; /* طول ثابت وموحد لكل المشاريع لمنع التداخل */
-  object-fit: cover;
+  object-fit: contain;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -124,7 +124,7 @@
 .img-detail-small {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 15px;
   cursor: pointer;
   transition: 0.4s ease;
@@ -229,13 +229,14 @@ section {
     padding: 10px 0;
   }
 
-  /* تنسيق الصور الكبيرة (المخطط والواقع) */
-  .img-main-portfolio {
+.img-main-portfolio {
     width: 100%;
-    height: 450px; /* ارتفاع الصور الرئيسية الكبير */
-    object-fit: cover;
+    height: auto; /* يسمح للصورة بالنمو حسب أبعادها */
+    aspect-ratio: 16 / 16; /* يفرض نسبة احترافية مثل شاشات العرض */
+    object-fit: cover; /* لضمان ملء المساحة */
     border-radius: 12px;
-  }
+    background-color: #f0f0f0; /* لون خلفية خفيف في حال التحميل */
+}
 
   /* أزرار التنقل للسلايدر */
   .carousel-control-prev, .carousel-control-next {

@@ -713,40 +713,40 @@ img {
 }
 
 .client-item {
-    flex: 1; /* تجعل الصور تتوزع بالتساوي على عرض الشاشة */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* مسافة داخلية صغيرة جداً لحماية الحواف */
+    padding: 10px; 
 }
 
 .client-item img {
-    /* جعل الحجم أكبر */
+ 
     width: auto;
     height: auto;
-    max-height: 120px; /* زيادة الارتفاع لتبدو الصور ضخمة وفخمة */
-    max-width: 250px;  /* زيادة العرض المسموح */
+    max-height: 200px; 
+    max-width: 250px;  
     object-fit: contain;
-    /* إزالة الفلتر الرمادي إذا أردتِ الألوان الأصلية الفخمة */
+    
     filter: none; 
     opacity: 1;
     transition: transform 0.4s ease;
 }
 
 .client-item:hover img {
-    transform: scale(1.08); /* تأثير تكبير خفيف عند المرور */
+    transform: scale(1.08); 
 }
 
-/* ضبط الجوال لجعلهم يظهرون بجانب بعضهم بحجم معقول */
+
 @media (max-width: 576px) {
     .marquee-track {
-        gap: 2px; /* مسافة شبه منعدمة في الجوال */
+        gap: 2px; 
     }
     .client-item {
         padding: 5px;
     }
     .client-item img {
-        max-height: 100px; /* حجم مناسب لعرض شاشة الجوال */
+        max-height: 110px; 
         max-width: 100%;
     }
 }
