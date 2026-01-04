@@ -746,7 +746,7 @@ img {
         padding: 5px;
     }
     .client-item img {
-        max-height: 80px; /* حجم مناسب لعرض شاشة الجوال */
+        max-height: 100px; /* حجم مناسب لعرض شاشة الجوال */
         max-width: 100%;
     }
 }
