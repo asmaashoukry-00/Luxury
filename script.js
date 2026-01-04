@@ -81,48 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// ===========================
-// Contact Form Validation
-// ===========================
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            // Basic validation
-            if (name === '' || email === '' || phone === '' || message === '') {
-                alert('الرجاء ملء جميع الحقول المطلوبة');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('الرجاء إدخال بريد إلكتروني صحيح');
-                return;
-            }
-            
-            // Phone validation (Saudi format)
-            const phoneRegex = /^(05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/;
-            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
-                alert('الرجاء إدخال رقم جوال صحيح');
-                return;
-            }
-            
-            // Success message
-            alert('شكراً لتواصلك معنا! سنقوم بالرد عليك في أقرب وقت ممكن.');
-            contactForm.reset();
-        });
-    }
-});
+
 
 // ===========================
 // Smooth Scroll for Anchor Links
@@ -167,32 +126,18 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// ===========================
-// WhatsApp Button
-// ===========================
-document.addEventListener('DOMContentLoaded', function() {
-    const whatsappBtn = document.querySelector('.whatsapp-float');
-    if (whatsappBtn) {
-        whatsappBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const phoneNumber = '966500000000'; // Replace with actual number
-            const message = 'مرحباً، أرغب في الاستفسار عن خدماتكم';
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        });
-    }
-});
+
 
 // ==============================
 // clients logo track duplication
 // ==============================
-document.addEventListener("DOMContentLoaded", function() {
-    const track = document.getElementById('clientTrack');
-    if (track) {
-        const content = track.innerHTML;
-        track.innerHTML = content + content + content;
-    }
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     const track = document.getElementById('clientTrack');
+//     if (track) {
+//         const content = track.innerHTML;
+//         track.innerHTML = content +    ;
+//     }
+// });
 
 
 // ==============================
@@ -221,3 +166,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+
+
+  

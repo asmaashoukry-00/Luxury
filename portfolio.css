@@ -188,3 +188,61 @@ section {
     width: 100%;
     overflow: hidden; 
 }
+/* Styling for the label above images */
+.img-label-box {
+    padding: 10px 20px;
+    /* background: rgba(212, 175, 55, 0.1);  */
+    /* Remove the fixed border-right and use logical properties */
+    border-right: none; 
+    border-left: none;
+    
+    /* This creates the border on the "start" of the text regardless of language */
+    border-inline-start: 5px solid var(--primary-gold); 
+    
+    margin-bottom: 15px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* For English (LTR) - the line will automatically move to the left */
+[dir="ltr"] .img-label-box {
+    border-inline-start: 5px solid var(--primary-gold);
+}
+
+/* For Arabic (RTL) - the line will automatically move to the right */
+[dir="rtl"] .img-label-box {
+    border-inline-start: 5px solid var(--primary-gold);
+}
+
+
+  /* توحيد حجم صور السلايدر (المربعات الصغيرة) */
+  .detail-item img, .img-detail-small {
+    width: 100%;
+    height: 200px; /* ارتفاع ثابت لجميع الصور */
+    object-fit: cover; /* أهم سطر: يقص الزوائد ويمنع تمطيط الصورة */
+    border-radius: 8px; /* حواف ناعمة */
+    transition: all 0.3s ease;
+  }
+
+  /* تنسيق الحاوية الخاصة بالسلايدر */
+  .details-slider-container {
+    padding: 10px 0;
+  }
+
+  /* تنسيق الصور الكبيرة (المخطط والواقع) */
+  .img-main-portfolio {
+    width: 100%;
+    height: 450px; /* ارتفاع الصور الرئيسية الكبير */
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* أزرار التنقل للسلايدر */
+  .carousel-control-prev, .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.5); /* خلفية سوداء شفافة للأزرار */
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }

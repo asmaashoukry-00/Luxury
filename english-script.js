@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const langBtnMain = document.getElementById("langBtnMain");
     const langSwitcher = document.querySelector(".lang-switcher-fixed");
 
-    // 1. وظيفة فتح وإغلاق قائمة الزر الجديد
     if (langBtnMain) {
         langBtnMain.addEventListener("click", (e) => {
             e.stopPropagation();
@@ -14,17 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (langSwitcher) langSwitcher.classList.remove("active");
     });
 
-    // 2. الدالة الرئيسية لتحويل اللغة (تحديث شامل)
     window.updateLanguage = function(lang) {
         const elements = document.querySelectorAll(".lang-key");
         const bootstrapLink = document.getElementById("bootstrap-link");
 
-        // الروابط (تأكدي من مطابقة id="bootstrap-link" في الهيد)
         const bootstrapAr = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css";
         const bootstrapEn = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css";
 
         elements.forEach((el) => {
-            // حفظ النص العربي الأصلي أول مرة فقط
             if (!el.getAttribute("data-ar")) {
                 el.setAttribute("data-ar", el.innerHTML.trim());
             }
@@ -87,4 +83,34 @@ window.addEventListener('load', function() {
             langSwitcher.classList.add('show-switcher');
         }
     }, 600); // 600ms matches most common fade-out animations
+});
+
+// ===========================
+// Smart WhatsApp Button (Multilingual)
+// ===========================
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const phoneNumber = '966551159850';
+            
+           
+            const currentLang = document.documentElement.lang; 
+            
+            
+            let message = '';
+            if (currentLang === 'en') {
+                message = ' I would like to inquire about your services.';
+            } else {
+                message = ' أرغب في الاستفسار عن خدماتكم.';
+            }
+            
+            
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        });
+    }
 });

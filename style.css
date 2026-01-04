@@ -667,7 +667,7 @@ img {
 /* ===========================
    clients section
    =========================== */
-   .section-clients {
+.section-clients {
     background: #ffffff;
     padding: 100px 0;
     overflow: hidden;
@@ -679,6 +679,7 @@ img {
     color: #1a1a1a;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    text-align: center; /* أضفت التوسيط لضمان التناسق */
 }
 
 .gold-separator {
@@ -688,49 +689,68 @@ img {
     margin: 0 auto 50px;
 }
 
+
+
+/* ===========================
+   تعديل قسم العملاء - الحجم الكبير والمسافات الملغاة
+   =========================== */
 .luxury-marquee {
     position: relative;
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
     display: flex;
-    overflow: hidden;
+    justify-content: center; 
+    background: #fff; /* لضمان وضوح الصور */
 }
 
 .marquee-track {
     display: flex;
-    gap: 100px; 
-    animation: luxury-scroll-rtl 35s linear infinite;
+    /* إلغاء المسافات الكبيرة */
+    gap: 0px; 
     align-items: center;
+    justify-content: center;
+    width: 90%; /* جعل الحاوية تأخذ عرض الشاشة لتعطي مساحة للصور */
 }
 
 .client-item {
-    flex-shrink: 0;
-    width: 180px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1; /* تجعل الصور تتوزع بالتساوي على عرض الشاشة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* مسافة داخلية صغيرة جداً لحماية الحواف */
 }
 
 .client-item img {
-    max-width: 100%;
-    filter: grayscale(100%);
-    opacity: 0.4;
-    transition: 0.6s ease;
+    /* جعل الحجم أكبر */
+    width: auto;
+    height: auto;
+    max-height: 120px; /* زيادة الارتفاع لتبدو الصور ضخمة وفخمة */
+    max-width: 250px;  /* زيادة العرض المسموح */
+    object-fit: contain;
+    /* إزالة الفلتر الرمادي إذا أردتِ الألوان الأصلية الفخمة */
+    filter: none; 
+    opacity: 1;
+    transition: transform 0.4s ease;
 }
 
 .client-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.08); /* تأثير تكبير خفيف عند المرور */
 }
 
-
-@keyframes luxury-scroll-rtl {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100%); }
+/* ضبط الجوال لجعلهم يظهرون بجانب بعضهم بحجم معقول */
+@media (max-width: 576px) {
+    .marquee-track {
+        gap: 5px; /* مسافة شبه منعدمة في الجوال */
+    }
+    .client-item {
+        padding: 5px;
+    }
+    .client-item img {
+        max-height: 60px; /* حجم مناسب لعرض شاشة الجوال */
+        max-width: 100%;
+    }
 }
 
-.luxury-marquee:hover .marquee-track {
-    animation-play-state: paused;
-}
 
 /* ===========================
    WhatsApp Button
@@ -990,6 +1010,10 @@ html[lang="en"] .lang-switcher-fixed {
     right: 20px;
 }
 
+/* html[lang="en"] p {
+    font-size: 18px !important;
+} */
+
 /* Main Button */
 .lang-btn-main {
     background: #fff;
@@ -1056,3 +1080,6 @@ html[lang="en"] .lang-switcher-fixed {
     visibility: visible;
     pointer-events: auto;
 }
+
+
+
