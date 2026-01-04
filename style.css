@@ -694,66 +694,77 @@ img {
 /* ===========================
    تعديل قسم العملاء - الحجم الكبير والمسافات الملغاة
    =========================== */
+/* --- قسم شركاء النجاح المطور --- */
+/* --- قسم شركاء النجاح - حجم كبير واحترافي --- */
+.section-clients {
+    background: #ffffff;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
 .luxury-marquee {
-    position: relative;
-    width: 100%;
-    padding: 20px 0;
     display: flex;
-    justify-content: center; 
-    background: #fff; /* لضمان وضوح الصور */
+    justify-content: center;
+    width: 100%;
 }
 
 .marquee-track {
     display: flex;
-    /* إلغاء المسافات الكبيرة */
-    gap: 0px; 
-    align-items: center;
+    gap: 30px; /* مسافة متوازنة */
     justify-content: center;
-    width: 90%; /* جعل الحاوية تأخذ عرض الشاشة لتعطي مساحة للصور */
+    flex-wrap: wrap; /* مهم جداً للجوال */
+    width: 90%;
+    max-width: 1200px;
 }
 
 .client-item {
-    flex: 1; 
+    flex: 0 1 350px; /* تكبير عرض الكارت لـ 350px */
+    height: 250px;    /* تكبير الارتفاع لـ 250px */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; 
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    /* إطار خفيف جداً لإعطاء شكل فخم */
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .client-item img {
- 
-    width: auto;
-    height: auto;
-    max-height: 200px; 
-    max-width: 250px;  
-    object-fit: contain;
-    
-    filter: none; 
-    opacity: 1;
-    transition: transform 0.4s ease;
+    width: 100%;      /* تأخذ كامل عرض الكارت المتاح */
+    height: 100%;     /* تأخذ كامل ارتفاع الكارت المتاح */
+    max-width: 280px; /* أقصى عرض للوجو نفسه داخل الكارت */
+    max-height: 180px;/* أقصى ارتفاع للوجو نفسه داخل الكارت */
+    object-fit: contain; /* أهم سطر: يمنع التمطيط ويحافظ على أبعاد اللوجو */
+    transition: all 0.4s ease;
 }
 
-.client-item:hover img {
-    transform: scale(1.08); 
+/* تأثير عند التمرير بالماوس */
+.client-item:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(243, 179, 8, 0.12);
+    border-color: var(--primary-gold);
 }
 
-
-@media (max-width: 576px) {
+/* --- تعديلات الجوال (تنسيق خاص جداً) --- */
+@media (max-width: 768px) {
+    .section-clients {
+        padding: 60px 0;
+    }
     .marquee-track {
-        gap: 2px; 
+        gap: 20px;
     }
     .client-item {
-        padding: 5px;
+        flex: 0 1 100%; /* اللوجو يأخذ عرض الشاشة بالكامل في الجوال */
+        height: 200px;  /* ارتفاع مناسب للجوال */
+        max-width: 320px; /* لضمان عدم ضخامته بشكل مبالغ فيه */
     }
     .client-item img {
-        max-height: 110px; 
-        max-width: 100%;
+        max-width: 220px;
+        max-height: 140px;
     }
 }
-
-
-
-
 
 
 
